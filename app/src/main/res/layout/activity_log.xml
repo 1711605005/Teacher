@@ -19,8 +19,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
+        android:id="@+id/btn_log_update"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="修改信息"
@@ -28,89 +28,85 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_e_mile" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tv_log_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="姓名：暂无信息"
+        android:text="姓名："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tv_log_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="编号：暂无信息"
+        android:text="编号："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_name" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tv_log_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="所教课程：暂无信息"
+        android:text="所教课程："
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintEnd_toEndOf="@+id/tv_log_num"
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_num" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tv_log_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="电话号码：暂无信息"
+        android:text="电话号码："
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="@+id/tv_log_sex"
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_sex" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tv_log_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="性别：暂无信息"
+        android:text="性别："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_course" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tv_log_degree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="学历：暂无信息"
+        android:text="学历："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_phone" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tv_log_e_mile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:text="邮箱：暂无信息"
+        android:text="邮箱："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_degree" />
 </android.support.constraint.ConstraintLayout>

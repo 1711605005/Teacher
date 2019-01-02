@@ -13,7 +13,7 @@
         android:layout_marginTop="50dp"
         android:text="姓名："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText5"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_name"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
@@ -25,7 +25,7 @@
         android:layout_marginTop="20dp"
         android:text="编号："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText6"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_num"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -37,7 +37,7 @@
         android:layout_marginTop="20dp"
         android:text="所教课程："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText7"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_course"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -48,7 +48,7 @@
         android:layout_marginTop="20dp"
         android:text="性别："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText8"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_sex"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -60,7 +60,7 @@
         android:layout_marginTop="20dp"
         android:text="电话号码："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText9"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_phone"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -71,7 +71,7 @@
         android:layout_marginTop="20dp"
         android:text="学历："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText10"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_degree"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -83,7 +83,7 @@
         android:layout_marginTop="20dp"
         android:text="邮箱："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText11"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_e_mile"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="教师基本信息修改页"
+        android:text="教师基本信息页"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,90 +102,83 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edt_insert_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入姓名"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView14" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/edt_insert_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入编号"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/edt_insert_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入课程"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editText6"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_insert_num"
+        app:layout_constraintStart_toStartOf="@+id/edt_insert_num"
+        app:layout_constraintTop_toBottomOf="@+id/edt_insert_num" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/edt_insert_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入性别"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/edt_insert_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:ems="10"
-        android:hint="请输入电话号码"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
-        app:layout_constraintEnd_toEndOf="@+id/editText8"
+        app:layout_constraintEnd_toEndOf="@+id/edt_insert_sex"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editText8" />
+        app:layout_constraintStart_toStartOf="@+id/edt_insert_sex" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/edt_insert_degree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入学历"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/edt_insert_e_mile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入邮箱"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="0dp"
+        android:id="@+id/btn_register_save"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:text="保存"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
