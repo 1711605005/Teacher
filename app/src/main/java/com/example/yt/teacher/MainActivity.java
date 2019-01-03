@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
             private void passDate() {
                 Intent intent=new Intent(MainActivity.this,LogActivity.class);
-                intent.putExtra("id",edtTxtId.getText().toString().trim());
                 startActivity(intent);
             }
         });
