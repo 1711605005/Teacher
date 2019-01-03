@@ -175,7 +175,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView20" />
 
     <Button
-        android:id="@+id/btn_register_save"
+        android:id="@+id/btn_insert_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
