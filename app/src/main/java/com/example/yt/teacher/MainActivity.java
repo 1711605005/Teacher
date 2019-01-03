@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         edtTxtId=findViewById(R.id.edtTxt_main_id);
         edtTxtPassword=findViewById(R.id.edtTxt_main_password);
         btnLand=findViewById(R.id.btn_main_land);
-        btnLand2=findViewById(R.id.btn_main_land2);
+        btnLand2=findViewById(R.id.btn_main_manage);
         btnRegister=findViewById(R.id.btn_main_register);
     }
 }

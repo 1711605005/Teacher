@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shi"
     tools:context=".LogActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_log_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="教师信息"
+        android:text="教师信息修改页"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,10 +22,16 @@
 
     <Button
         android:id="@+id/btn_log_update"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/button_onoff_indicator_on"
         android:text="修改信息"
+        android:textColor="#d0da3131"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,11 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:text="姓名："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_top" />
 
     <TextView
         android:id="@+id/tv_log_num"
@@ -109,4 +117,67 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_log_degree" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_name" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_num"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_num" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_course"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_course" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_sex"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_sex" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_phone"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_phone" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_degree"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_degree" />
+
+    <EditText
+        android:id="@+id/edtTxt_log_emile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_e_mile"
+        app:layout_constraintStart_toEndOf="@+id/tv_log_e_mile" />
 </android.support.constraint.ConstraintLayout>

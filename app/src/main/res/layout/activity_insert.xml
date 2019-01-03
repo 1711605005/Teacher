@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shi"
     tools:context=".InsertActivity">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tv_insert_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -16,10 +17,10 @@
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_name"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_top" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tv_insert_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -28,10 +29,10 @@
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_num"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_name" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/tv_insert_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -39,10 +40,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_course"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_num" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tv_insert_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -51,10 +52,10 @@
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_sex"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_course" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/tv_insert_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -62,10 +63,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_phone"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_sex" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/tv_insert_degree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -74,10 +75,10 @@
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_degree"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_phone" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/tv_insert_emile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -86,14 +87,14 @@
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_e_mile"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_degree" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/tv_insert_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="教师基本信息页"
+        android:text="教师基本信息添加页"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,9 +108,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView14" />
+        app:layout_constraintStart_toEndOf="@+id/tv_insert_name" />
 
     <EditText
         android:id="@+id/edt_insert_num"
@@ -117,9 +118,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_num"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView15" />
+        app:layout_constraintStart_toEndOf="@+id/tv_insert_num" />
 
     <EditText
         android:id="@+id/edt_insert_course"
@@ -137,9 +138,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_sex"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView17" />
+        app:layout_constraintStart_toEndOf="@+id/tv_insert_sex" />
 
     <EditText
         android:id="@+id/edt_insert_phone"
@@ -149,7 +150,7 @@
         android:layout_marginLeft="8dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_phone"
         app:layout_constraintEnd_toEndOf="@+id/edt_insert_sex"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/edt_insert_sex" />
@@ -157,12 +158,12 @@
     <EditText
         android:id="@+id/edt_insert_degree"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_degree"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView19" />
+        app:layout_constraintStart_toEndOf="@+id/tv_insert_degree" />
 
     <EditText
         android:id="@+id/edt_insert_e_mile"
@@ -170,18 +171,25 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_emile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView20" />
+        app:layout_constraintStart_toEndOf="@+id/tv_insert_emile" />
 
     <Button
         android:id="@+id/btn_insert_save"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="保存"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:text="添加教师信息"
+        android:textColor="#e23601"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_insert_emile" />
 </android.support.constraint.ConstraintLayout>
