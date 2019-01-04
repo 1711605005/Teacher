@@ -12,9 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="教师页"
+        android:text="输入教师编号或姓名其中之一即可进行查询！"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,11 +21,11 @@
 
     <EditText
         android:id="@+id/edtTxt_manage_num"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="请输入教师编号"
+        android:hint="请输入教师编号进行查询"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/edtTxt_manage_name"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,10 +34,10 @@
 
     <EditText
         android:id="@+id/edtTxt_manage_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入教师姓名"
+        android:hint="请输入教师姓名进行查询"
         android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_manage_num"
         app:layout_constraintEnd_toEndOf="parent"

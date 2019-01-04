@@ -19,7 +19,9 @@
         <activity android:name=".LogActivity" />
         <activity android:name=".InsertActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ManageActivity"></activity>
+        <activity android:name=".ManageActivity" />
+        <activity android:name=".DeleteActivity" />
+        <activity android:name=".InquiryActivity"></activity>
     </application>
 
 </manifest>

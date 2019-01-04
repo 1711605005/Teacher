@@ -44,11 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="姓名："
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_log_top" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_ps" />
 
     <TextView
         android:id="@+id/tv_log_num"
@@ -180,4 +180,16 @@
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_e_mile"
         app:layout_constraintStart_toEndOf="@+id/tv_log_e_mile" />
+
+    <TextView
+        android:id="@+id/tv_log_ps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="请输入已添加的姓名或编号进行修改其他数据！"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_log_top" />
 </android.support.constraint.ConstraintLayout>

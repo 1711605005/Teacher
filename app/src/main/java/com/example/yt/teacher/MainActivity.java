@@ -8,8 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText edtTxtId,edtTxtPassword;
-    Button btnLand,btnRegister,btnLand2;
+    Button btnLand;
 
 
     @Override
@@ -24,7 +23,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
             private void passDate() {
-                Intent intent=new Intent(MainActivity.this,LogActivity.class);
+                Intent intent=new Intent(MainActivity.this,ManageActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.btn_main_manage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -32,10 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void intUI() {
-        edtTxtId=findViewById(R.id.edtTxt_main_id);
-        edtTxtPassword=findViewById(R.id.edtTxt_main_password);
         btnLand=findViewById(R.id.btn_main_land);
-        btnLand2=findViewById(R.id.btn_main_manage);
-        btnRegister=findViewById(R.id.btn_main_register);
     }
 }

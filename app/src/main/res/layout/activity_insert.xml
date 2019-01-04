@@ -84,7 +84,7 @@
         android:layout_marginTop="20dp"
         android:text="邮箱："
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/edt_insert_e_mile"
+        app:layout_constraintEnd_toStartOf="@+id/edt_insert_emile"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_insert_degree" />
@@ -166,7 +166,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_insert_degree" />
 
     <EditText
-        android:id="@+id/edt_insert_e_mile"
+        android:id="@+id/edt_insert_emile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
