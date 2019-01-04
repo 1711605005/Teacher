@@ -5,15 +5,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyHelper extends SQLiteOpenHelper {
-    public MyHelper(Context context){
-        super(context,"teacher.db",null,2);
+    public MyHelper(Context context, String dBName, SQLiteDatabase.CursorFactory factory, int version){
+        super(context,dBName,factory,version);
 
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE information(_id INTEGER PRIMARY KEY AUTOINCREMENT,name,course,sex,degree VARCHAR(20),num,phone,emile long,price INTEGER)");
-
+        String sql="create table teacher(_id integer primary key autoincrement,name varchar(20),num integer)";
+        db.execSQL(sql);
     }
 
     @Override
