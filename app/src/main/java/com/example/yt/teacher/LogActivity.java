@@ -1,16 +1,21 @@
 package com.example.yt.teacher;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class LogActivity extends AppCompatActivity {
+public class LogActivity extends AppCompatActivity implements View.OnClickListener {
     TextView tvName,tvNum,tvCourse,tvPhone,tvSex,tvDegree,tvEmile;
+    EditText edtTxtName,edtTxtNum,edtTxtCourse,edtTxtPhone,edtTxtSex,edtTxtDegree,edtTxtEmile;
     Button btnUpdate;
-
+    MyHelper myHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +29,15 @@ public class LogActivity extends AppCompatActivity {
 //        String degree=intent.getStringExtra("degree");
 //        String e_mile=intent.getStringExtra("e_mile");
 //
-//        tvName=findViewById(R.id.tv_log_name);
-//        tvNum=findViewById(R.id.tv_log_num);
-//        tvCourse=findViewById( R.id.tv_log_course);
-//        tvPhone=findViewById(R.id.tv_log_phone);
-//        tvSex=findViewById(R.id.tv_log_sex);
-//        tvDegree=findViewById(R.id.tv_log_degree);
-//        tvEmile=findViewById(R.id.tv_log_e_mile);
-//        btnUpdate=findViewById(R.id.btn_log_update);
+        edtTxtName=findViewById(R.id.edtTxt_log_name);
+        edtTxtNum=findViewById(R.id.edtTxt_log_num);
+        edtTxtCourse=findViewById( R.id.edtTxt_log_course);
+        edtTxtPhone=findViewById(R.id.edtTxt_log_phone);
+        edtTxtSex=findViewById(R.id.edtTxt_log_sex);
+        edtTxtDegree=findViewById(R.id.edtTxt_log_degree);
+        edtTxtEmile=findViewById(R.id.edtTxt_log_emile);
+        btnUpdate=findViewById(R.id.btn_log_update);
+        myHelper=new MyHelper(this);
 //
 //        tvName.setText("姓名："+name);
 //        tvNum.setText("编号："+num);
@@ -49,5 +55,30 @@ public class LogActivity extends AppCompatActivity {
 //
 //            }
 //        });
+        btnUpdate.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        String name;
+        String num;
+        String course;
+        String phone;
+        String sex;
+        String degree;
+        String e_mile;
+        SQLiteDatabase db;
+        ContentValues values;
+        db=myHelper.getWritableDatabase();
+        values=new ContentValues();
+        values.put("course",course=edtTxtCourse.getText().toString());
+        values.put("phone",phone=edtTxtPhone.getText().toString());
+        values.put("sex",sex=edtTxtSex.getText().toString());
+        values.put("degree",degree=edtTxtDegree.getText().toString());
+        values.put("e_mile",e_mile=edtTxtEmile.getText().toString());
+        db.update("information",values,"name=?",new String[]{edtTxtName.getText().toString()});
+        Toast.makeText(this,"信息已修改",Toast.LENGTH_SHORT).show();
+        db.close();
     }
 }
