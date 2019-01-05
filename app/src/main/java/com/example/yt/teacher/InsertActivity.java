@@ -47,7 +47,7 @@ public class InsertActivity extends AppCompatActivity {
                 boolean result=adapter.insert(infor);
                 if (result){
                     Toast.makeText(getApplicationContext(),"信息添加成功",Toast.LENGTH_SHORT).show();
-
+                    onBackPressed();
                 }else{
                     Toast.makeText(getApplicationContext(),"信息添加失败",Toast.LENGTH_SHORT).show();
 
@@ -55,6 +55,7 @@ public class InsertActivity extends AppCompatActivity {
 
           }
        });
+
 
     }
 }

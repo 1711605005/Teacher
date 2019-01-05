@@ -23,7 +23,7 @@ public class ManageActivity extends AppCompatActivity implements View.OnClickLis
         edtTxtName=findViewById(R.id.edtTxt_manage_name);
         edtTxtNum=findViewById(R.id.edtTxt_manage_num);
         btnland=findViewById(R.id.btn_manage_land);
-        myHelper=new MyHelper(this);
+        myHelper=new MyHelper(this,"database.db",null,1);
 
         btnland.setOnClickListener(this);
     }
@@ -35,7 +35,7 @@ public class ManageActivity extends AppCompatActivity implements View.OnClickLis
         SQLiteDatabase db;
         ContentValues values;
         db=myHelper.getReadableDatabase();
-        Cursor cursor=db.query("information",null,null,null,null,null,null,null);
+        Cursor cursor=db.query("teacher",null,null,null,null,null,null,null);
         if (cursor.getCount()==0){
             tvDisplay.setText("");
             Toast.makeText(this,"没有数据",Toast.LENGTH_SHORT).show();
@@ -48,7 +48,7 @@ public class ManageActivity extends AppCompatActivity implements View.OnClickLis
                     "性别："+cursor.getString(7)+"n/"+cursor.getString(8)+
                     "电话号码："+cursor.getString(9)+"n/"+cursor.getString(10)+
                     "学历："+cursor.getString(11)+"n/"+cursor.getString(12)+
-                    "邮箱："+cursor.getString(13)+"n/"+cursor.getString(14));
+                    "QQ号码："+cursor.getString(13)+"n/"+cursor.getString(14));
         }
         cursor.close();
         db.close();

@@ -82,11 +82,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="邮箱："
+        android:text="QQ号码："
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/edt_insert_emile"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_insert_degree" />
 
     <TextView
@@ -172,8 +171,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_insert_emile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_insert_emile" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_insert_degree"
+        app:layout_constraintStart_toStartOf="@+id/edt_insert_degree" />
 
     <Button
         android:id="@+id/btn_insert_save"

@@ -6,13 +6,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyHelper extends SQLiteOpenHelper {
     public MyHelper(Context context, String dBName, SQLiteDatabase.CursorFactory factory, int version){
-        super(context,dBName,factory,version);
+        super(context,"database.db",null,1);
 
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql="create table teacher(_id integer primary key autoincrement,name varchar(20),num integer)";
+        String sql="create table teacher(_id integer primary key autoincrement,name varchar(20),sex varchar(20),degree varchar(20),course varchar(20),num,emile,phone integer)";
         db.execSQL(sql);
     }
 
