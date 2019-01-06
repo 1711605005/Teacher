@@ -1,17 +1,20 @@
 package com.example.yt.teacher;
 
 public class Infor {
+//    public String name,course,sex,degree;
+//    public long num,phone,emile;
+
     private String name,course,sex,degree;
     private long num,phone,emile;
-    private int _id;
-
-    public int get_id() {
-        return _id;
-    }
-
-    public void set_id(int _id) {
-        this._id = _id;
-    }
+//    private int _id;
+//
+//    public int get_id() {
+//        return _id;
+//    }
+//
+//    public void set_id(int _id) {
+//        this._id = _id;
+//    }
 
     public String getName() {
         return name;

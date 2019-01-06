@@ -20,8 +20,8 @@ public class ManageActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage);
-        edtTxtName=findViewById(R.id.edtTxt_manage_name);
-        edtTxtNum=findViewById(R.id.edtTxt_manage_num);
+        edtTxtName=findViewById(R.id.edtTxt_manage_course);
+        edtTxtNum=findViewById(R.id.edtTxt_manage_name);
         btnland=findViewById(R.id.btn_manage_land);
         myHelper=new MyHelper(this,"database.db",null,1);
 

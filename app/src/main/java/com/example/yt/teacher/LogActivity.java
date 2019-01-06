@@ -37,25 +37,6 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-//        String name;
-//        String num;
-//        String course;
-//        String phone;
-//        String sex;
-//        String degree;
-//        String e_mile;
-//        SQLiteDatabase db;
-//        ContentValues values;
-//        db=myHelper.getWritableDatabase();
-//        values=new ContentValues();
-//        values.put("course",course=edtTxtCourse.getText().toString());
-//        values.put("phone",phone=edtTxtPhone.getText().toString());
-//        values.put("sex",sex=edtTxtSex.getText().toString());
-//        values.put("degree",degree=edtTxtDegree.getText().toString());
-//        values.put("e_mile",e_mile=edtTxtEmile.getText().toString());
-//        db.update("teacher",values,"name=? and num=?",new String[]{edtTxtName.getText().toString(),edtTxtNum.getText().toString()});
-//        Toast.makeText(this,"信息已修改",Toast.LENGTH_SHORT).show();
-//        db.close();
         String name=edtTxtName.getText().toString().trim();
         String degree=edtTxtDegree.getText().toString().trim();
         String sex=edtTxtSex.getText().toString().trim();
@@ -73,6 +54,6 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
         infor.setPhone(phone);
         MySQLiteAdapter adapter=new MySQLiteAdapter(getApplicationContext(),"database.db");
         adapter.update(infor);
-
+        onBackPressed();
     }
 }

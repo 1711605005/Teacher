@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="输入教师编号或姓名其中之一即可进行查询！"
+        android:text="输入教师姓名或课程其中之一即可进行查询！"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -20,29 +20,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtTxt_manage_num"
+        android:id="@+id/edtTxt_manage_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="请输入教师编号进行查询"
+        android:hint="请输入教师姓名进行查询"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/edtTxt_manage_name"
+        app:layout_constraintEnd_toStartOf="@+id/edtTxt_manage_course"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_manage_top" />
 
     <EditText
-        android:id="@+id/edtTxt_manage_name"
+        android:id="@+id/edtTxt_manage_course"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="请输入教师姓名进行查询"
+        android:hint="请输入课程进行查询"
         android:inputType="textPassword"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_manage_num"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_manage_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/edtTxt_manage_num" />
+        app:layout_constraintStart_toEndOf="@+id/edtTxt_manage_name" />
 
     <Button
         android:id="@+id/btn_manage_land"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxt_manage_num" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxt_manage_name" />
 
     <TextView
         android:id="@+id/tv_manage_display"
@@ -73,6 +73,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:background="#6df4eaea"
+        android:textColor="#d2e91bb2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

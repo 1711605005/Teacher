@@ -132,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_num"
         app:layout_constraintStart_toEndOf="@+id/tv_log_num" />
 
@@ -159,7 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_phone"
         app:layout_constraintStart_toEndOf="@+id/tv_log_phone" />
 
@@ -177,7 +177,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_log_e_mile"
         app:layout_constraintEnd_toEndOf="@+id/edtTxt_log_degree"
         app:layout_constraintStart_toStartOf="@+id/edtTxt_log_degree" />
@@ -187,7 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="请输入已添加的姓名或编号进行修改其他数据！"
+        android:text="请输入已添加的姓名进行修改其他数据！"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

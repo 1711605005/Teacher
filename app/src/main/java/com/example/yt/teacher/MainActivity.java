@@ -6,23 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toolbar;
 
 public class  MainActivity extends AppCompatActivity {
-    Button btnLand;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        intUI();
-        btnLand.setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.btn_main_land).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                passDate();
-            }
-
-            private void passDate() {
                 Intent intent=new Intent(MainActivity.this,ManageActivity.class);
                 startActivity(intent);
             }
@@ -37,7 +31,5 @@ public class  MainActivity extends AppCompatActivity {
 
     }
 
-    private void intUI() {
-        btnLand=findViewById(R.id.btn_main_land);
-    }
+
 }

@@ -12,14 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class DeleteActivity extends AppCompatActivity implements View.OnClickListener {
-       EditText edtTxtName,edtTxtNum;
+       EditText edtTxtName;
         Button btnClear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
         edtTxtName=findViewById(R.id.edtTxt_delete_name);
-        edtTxtNum=findViewById(R.id.edtTxt_delete_num);
         btnClear=findViewById(R.id.btn_delete_clear);
 
         btnClear.setOnClickListener(this);
@@ -28,8 +27,8 @@ public class DeleteActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         String name=edtTxtName.getText().toString().trim();
-        //Long num=Long.valueOf(edtTxtNum.getText().toString().trim());
         MySQLiteAdapter adapter=new MySQLiteAdapter(getApplicationContext(),"database.db");
         adapter.deleteByName(name);
+
     }
 }
