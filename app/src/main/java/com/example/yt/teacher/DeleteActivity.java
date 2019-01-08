@@ -29,6 +29,6 @@ public class DeleteActivity extends AppCompatActivity implements View.OnClickLis
         String name=edtTxtName.getText().toString().trim();
         MySQLiteAdapter adapter=new MySQLiteAdapter(getApplicationContext(),"database.db");
         adapter.deleteByName(name);
-
+        edtTxtName.setText(null);
     }
 }

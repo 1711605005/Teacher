@@ -58,7 +58,7 @@ public class InquiryActivity extends AppCompatActivity {
                     tvDisplay.append("手机号码："+String.valueOf(phone));
                     tvDisplay.append("\n");
                     tvDisplay.append("QQ号码："+String.valueOf(emile));
-                    tvDisplay.append("\n");//读完换行
+                    tvDisplay.append("\n"+"\n");//读完换行
 
                 }
 
@@ -76,6 +76,10 @@ public class InquiryActivity extends AppCompatActivity {
 
                         list=adapter.queryName(name);
 
+                }else {
+                    if (!course.equals("")){
+                        list=adapter.queryByCourse(course);
+                    }
                 }
                 Iterator<Infor> iterator=list.iterator();
                 tvDisplay.setText(null);

@@ -11,8 +11,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class ManageActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText edtTxtNum,edtTxtName;
+    EditText edtTxtCourse,edtTxtName;
     Button btnland;
     TextView tvDisplay;
     MyHelper myHelper;
@@ -20,37 +24,37 @@ public class ManageActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage);
-        edtTxtName=findViewById(R.id.edtTxt_manage_course);
-        edtTxtNum=findViewById(R.id.edtTxt_manage_name);
+        edtTxtName=findViewById(R.id.edtTxt_manage_name);
+        edtTxtCourse=findViewById(R.id.edtTxt_manage_course);
         btnland=findViewById(R.id.btn_manage_land);
-        myHelper=new MyHelper(this,"database.db",null,1);
-
+        tvDisplay=findViewById(R.id.tv_manage_display);
         btnland.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        String name;
-        String num;
-        SQLiteDatabase db;
-        ContentValues values;
-        db=myHelper.getReadableDatabase();
-        Cursor cursor=db.query("teacher",null,null,null,null,null,null,null);
-        if (cursor.getCount()==0){
-            tvDisplay.setText("");
-            Toast.makeText(this,"没有数据",Toast.LENGTH_SHORT).show();
-        }else {
-            cursor.moveToFirst();
-            tvDisplay.setText(
-                    "姓名："+cursor.getString(1)+"n/"+cursor.getString(2)+
-                    "编号："+cursor.getString(3)+"n/"+cursor.getString(4)+
-                    "所教课程："+cursor.getString(5)+"n/"+cursor.getString(6)+
-                    "性别："+cursor.getString(7)+"n/"+cursor.getString(8)+
-                    "电话号码："+cursor.getString(9)+"n/"+cursor.getString(10)+
-                    "学历："+cursor.getString(11)+"n/"+cursor.getString(12)+
-                    "QQ号码："+cursor.getString(13)+"n/"+cursor.getString(14));
+       String name=edtTxtName.getText().toString().trim() ;
+       String course=String.valueOf(edtTxtCourse.getText().toString().trim());
+       MySQLiteAdapter adapter=new MySQLiteAdapter(getApplicationContext(),"database.db");
+        List<Infor> list=new ArrayList<>();
+        if (!name.equals("")) {
+            if (!course.equals("")) {
+                list = adapter.queryNumCourse(name, course);
+            }
         }
-        cursor.close();
-        db.close();
+            Iterator<Infor> iterable=list.iterator();
+            tvDisplay.setText(null);
+            while (iterable.hasNext()){
+                Infor infor=iterable.next();
+                tvDisplay.append("姓名："+infor.getName()+"\n");
+                tvDisplay.append("教师编号："+String.valueOf(infor.getNum())+"\n");
+                tvDisplay.append("所教课程："+infor.getCourse()+"\n");
+                tvDisplay.append("学历："+infor.getDegree()+"\n");
+                tvDisplay.append("性别："+infor.getSex()+"\n");
+                tvDisplay.append("电话号码："+String.valueOf(infor.getPhone())+"\n");
+                tvDisplay.append("QQ号码："+String.valueOf(infor.getEmile())+"\n");
+                tvDisplay.append("\n");
+            }
+
     }
 }

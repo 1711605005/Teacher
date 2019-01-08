@@ -1,6 +1,7 @@
 package com.example.yt.teacher;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 
 public class InsertActivity extends AppCompatActivity {
     EditText edtTxtName,edtTxtNum,edtTxtCourse,edtTxtSex,edtTxtPhone,edtTxtDegree,edtTxtEmile;
-
+    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,24 +36,27 @@ public class InsertActivity extends AppCompatActivity {
                 Long num=Long.valueOf(edtTxtNum.getText().toString().trim());
                 Long phone=Long.valueOf(edtTxtPhone.getText().toString().trim());
                 Long emile=Long.valueOf(edtTxtEmile.getText().toString().trim());
-                MySQLiteAdapter adapter=new MySQLiteAdapter(getApplicationContext(),"database.db");
-                Infor infor=new Infor();
-                infor.setName(name);
-                infor.setCourse(course);
-                infor.setEmile(emile);
-                infor.setDegree(degree);
-                infor.setNum(num);
-                infor.setPhone(phone);
-                infor.setSex(sex);
-                boolean result=adapter.insert(infor);
-                if (result){
-                    Toast.makeText(getApplicationContext(),"信息添加成功",Toast.LENGTH_SHORT).show();
-                    onBackPressed();
-                }else{
-                    Toast.makeText(getApplicationContext(),"信息添加失败",Toast.LENGTH_SHORT).show();
+                if (emile==null){
+                    Toast.makeText(context,"请输入所有信息！",Toast.LENGTH_SHORT).show();
+                }else {
+                    MySQLiteAdapter adapter = new MySQLiteAdapter(getApplicationContext(), "database.db");
+                    Infor infor = new Infor();
+                    infor.setName(name);
+                    infor.setCourse(course);
+                    infor.setEmile(emile);
+                    infor.setDegree(degree);
+                    infor.setNum(num);
+                    infor.setPhone(phone);
+                    infor.setSex(sex);
+                    boolean result = adapter.insert(infor);
+                    if (result) {
+                        Toast.makeText(getApplicationContext(), "信息添加成功", Toast.LENGTH_SHORT).show();
+                        onBackPressed();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "信息添加失败", Toast.LENGTH_SHORT).show();
 
+                    }
                 }
-
           }
        });
 

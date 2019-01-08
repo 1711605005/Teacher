@@ -114,7 +114,7 @@ public class MySQLiteAdapter {
         openDatabase();
         //数据库查询结果cursor-->List<>集合类
         List<Infor> list=new ArrayList<>();
-        Cursor cursor=db.query("teacher",null,"name=?",new String[]{name},null,null,null,null);
+        Cursor cursor=db.query("teacher",null,"name=?",new String[]{name},null,null,null);
         //Cursor->（Infor对象集合多条Infor对象)
         int length=cursor.getCount();
         if(length>0){
@@ -156,13 +156,90 @@ public class MySQLiteAdapter {
             result=true;
             Toast.makeText(context,"删除成功",Toast.LENGTH_SHORT).show();
 
-        }else{
-            Toast.makeText(context,"该教师信息已不在数据库中！",Toast.LENGTH_SHORT).show();
+        }else {
+            if (name.equals("")) {
+                Toast.makeText(context, "请输入信息！", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(context, "该教师信息已不在数据库中！", Toast.LENGTH_SHORT).show();
+            }
         }
         closeDatabase();
         return result;
     }
 
+    public List<Infor> queryNumCourse(String name, String course) {
+        openDatabase();
+        //数据库查询结果cursor-->List<>集合类
+        List<Infor> list=new ArrayList<>();
+        Cursor cursor=db.query("teacher",null,"name=? and course=?",new String[]{name,course},null,null,null);
+        //Cursor->（Infor对象集合多条Infor对象)
+        int length=cursor.getCount();
+        if(length>0){
+            cursor.moveToFirst();
+            do{
+                //读数据
+                //int id=cursor.getInt(cursor.getColumnIndex("_id"));//_id列
+                name=cursor.getString(cursor.getColumnIndex("name"));//name列
+                Long phone=cursor.getLong(cursor.getColumnIndex("phone"));//phone列
+                Long num=cursor.getLong(cursor.getColumnIndex("num"));
+                String degree=cursor.getString(cursor.getColumnIndex("degree"));
+                Long emile=cursor.getLong(cursor.getColumnIndex("emile"));
+                course=cursor.getString(cursor.getColumnIndex("course"));
+                String sex=cursor.getString(cursor.getColumnIndex("sex"));
+                Infor infor=new Infor();
+                //  infor.set_id(id);
+                infor.setName(name);
+                infor.setPhone(phone);
+                infor.setCourse(course);
+                infor.setEmile(emile);
+                infor.setDegree(degree);
+                infor.setSex(sex);
+                infor.setNum(num);
+                list.add(infor);
+
+
+            }while(cursor.moveToNext());
+        }
+        closeDatabase();
+        return list;
+    }
+
+    public List<Infor> queryByCourse(String course) {
+        openDatabase();
+        //数据库查询结果cursor-->List<>集合类
+        List<Infor> list=new ArrayList<>();
+        Cursor cursor=db.query("teacher",null,"course=?",new String[]{course},null,null,null);
+        //Cursor->（Infor对象集合多条Infor对象)
+        int length=cursor.getCount();
+        if(length>0){
+            cursor.moveToFirst();
+            do{
+                //读数据
+                //int id=cursor.getInt(cursor.getColumnIndex("_id"));//_id列
+                String name=cursor.getString(cursor.getColumnIndex("name"));//name列
+                Long phone=cursor.getLong(cursor.getColumnIndex("phone"));//phone列
+                Long num=cursor.getLong(cursor.getColumnIndex("num"));
+                String degree=cursor.getString(cursor.getColumnIndex("degree"));
+                Long emile=cursor.getLong(cursor.getColumnIndex("emile"));
+                course=cursor.getString(cursor.getColumnIndex("course"));
+                String sex=cursor.getString(cursor.getColumnIndex("sex"));
+                Infor infor=new Infor();
+                //  infor.set_id(id);
+                infor.setName(name);
+                infor.setPhone(phone);
+                infor.setCourse(course);
+                infor.setEmile(emile);
+                infor.setDegree(degree);
+                infor.setSex(sex);
+                infor.setNum(num);
+                list.add(infor);
+
+
+            }while(cursor.moveToNext());
+        }
+        closeDatabase();
+        return list;
+    }
 
 
 //    public ArrayList<Infor> inquiry(String name){
