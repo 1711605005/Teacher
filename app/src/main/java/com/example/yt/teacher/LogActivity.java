@@ -41,9 +41,9 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
         String degree=edtTxtDegree.getText().toString().trim();
         String sex=edtTxtSex.getText().toString().trim();
         String course=edtTxtCourse.getText().toString().trim();
-        Long phone=Long.valueOf(edtTxtPhone.getText().toString().trim());
-        Long num=Long.valueOf(edtTxtNum.getText().toString().trim());
-        Long emile=Long.valueOf(edtTxtEmile.getText().toString().trim());
+        String num=edtTxtNum.getText().toString().trim();
+        String phone=edtTxtPhone.getText().toString().trim();
+        String emile=edtTxtEmile.getText().toString().trim();
         Infor infor=new Infor();
         infor.setName(name);
         infor.setSex(sex);

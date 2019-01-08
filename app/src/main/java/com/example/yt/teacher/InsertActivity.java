@@ -33,11 +33,23 @@ public class InsertActivity extends AppCompatActivity {
                 String degree=edtTxtDegree.getText().toString().trim();
                 String sex=edtTxtSex.getText().toString().trim();
                 String course=edtTxtCourse.getText().toString().trim();
-                Long num=Long.valueOf(edtTxtNum.getText().toString().trim());
-                Long phone=Long.valueOf(edtTxtPhone.getText().toString().trim());
-                Long emile=Long.valueOf(edtTxtEmile.getText().toString().trim());
-                if (emile==null){
-                    Toast.makeText(context,"请输入所有信息！",Toast.LENGTH_SHORT).show();
+                String num=edtTxtNum.getText().toString().trim();
+                String phone=edtTxtPhone.getText().toString().trim();
+                String emile=edtTxtEmile.getText().toString().trim();
+                if (name.length()==0){
+                    Toast.makeText(InsertActivity.this,"姓名不能为空！",Toast.LENGTH_SHORT).show();
+                }else if (num.length()==0) {
+                    Toast.makeText(InsertActivity.this, "教师编号不能为空！", Toast.LENGTH_SHORT).show();
+                }else if (course.length()==0) {
+                    Toast.makeText(InsertActivity.this, "所教课程不能为空！", Toast.LENGTH_SHORT).show();
+                }else if (sex.length()==0) {
+                    Toast.makeText(InsertActivity.this, "性别不能为空！", Toast.LENGTH_SHORT).show();
+                }else if (phone.length()==0) {
+                    Toast.makeText(InsertActivity.this,"电话号码不能为空！", Toast.LENGTH_SHORT).show();
+                }else if (degree.length()==0) {
+                    Toast.makeText(InsertActivity.this,"学历不能为空！", Toast.LENGTH_SHORT).show();
+                }else if (emile.length()==0) {
+                    Toast.makeText(InsertActivity.this, "QQ号码不能为空！", Toast.LENGTH_SHORT).show();
                 }else {
                     MySQLiteAdapter adapter = new MySQLiteAdapter(getApplicationContext(), "database.db");
                     Infor infor = new Infor();

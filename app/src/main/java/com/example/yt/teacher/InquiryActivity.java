@@ -43,9 +43,9 @@ public class InquiryActivity extends AppCompatActivity {
                     String sex=infor.getSex();
                     String degree=infor.getDegree();
                     String course=infor.getCourse();
-                    Long num=infor.getNum();
-                    Long emile=infor.getEmile();
-                    Long phone=infor.getPhone();
+                   String num=infor.getNum();
+                   String emile=infor.getEmile();
+                    String phone=infor.getPhone();
                     // tvDisplay.append(" id:"+String.valueOf(id));//追加
                     tvDisplay.append("姓名："+name);
                     tvDisplay.append("\n");

@@ -34,9 +34,9 @@ public class MySQLiteAdapter {
         String degree=infor.getDegree();
         String sex=infor.getSex();
         String course=infor.getCourse();
-        long num=infor.getNum();
-        long phone=infor.getPhone();
-        long emile=infor.getEmile();
+        String num=infor.getNum();
+        String phone=infor.getPhone();
+        String emile=infor.getEmile();
         ContentValues values=new ContentValues();
         values.put("name",name);
         values.put("num",num);
@@ -49,7 +49,28 @@ public class MySQLiteAdapter {
         long rawId=db.insert("teacher",null,values);
         if (rawId!=1){
             result=true;
-        }
+        }else if (name.length()==0){
+            Toast.makeText(context,"姓名不能为空！",Toast.LENGTH_SHORT).show();
+
+    }else if (num.length()==0) {
+        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+
+    }else if (course.length()==0) {
+        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+
+    }else if (sex.length()==0) {
+        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+
+    }else if (phone.length()==0) {
+        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+
+    }else if (degree.length()==0) {
+        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+
+    }else if (emile.length()==0) {
+        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+
+    }
         closeDatabase();
         return result;
     }
@@ -87,10 +108,10 @@ public class MySQLiteAdapter {
                 //读数据
                 //int id=cursor.getInt(cursor.getColumnIndex("_id"));//_id列
                 String name=cursor.getString(cursor.getColumnIndex("name"));//name列
-                Long phone=cursor.getLong(cursor.getColumnIndex("phone"));//phone列
-                Long num=cursor.getLong(cursor.getColumnIndex("num"));
+                String phone=cursor.getString(cursor.getColumnIndex("phone"));//phone列
+                String  num=cursor.getString(cursor.getColumnIndex("num"));
                 String degree=cursor.getString(cursor.getColumnIndex("degree"));
-                Long emile=cursor.getLong(cursor.getColumnIndex("emile"));
+                String emile=cursor.getString(cursor.getColumnIndex("emile"));
                 String course=cursor.getString(cursor.getColumnIndex("course"));
                 String sex=cursor.getString(cursor.getColumnIndex("sex"));
                 Infor infor=new Infor();
@@ -123,10 +144,10 @@ public class MySQLiteAdapter {
                 //读数据
                 //int id=cursor.getInt(cursor.getColumnIndex("_id"));//_id列
                 name=cursor.getString(cursor.getColumnIndex("name"));//name列
-                Long phone=cursor.getLong(cursor.getColumnIndex("phone"));//phone列
-                Long num=cursor.getLong(cursor.getColumnIndex("num"));
+                String phone=cursor.getString(cursor.getColumnIndex("phone"));//phone列
+                String  num=cursor.getString(cursor.getColumnIndex("num"));
                 String degree=cursor.getString(cursor.getColumnIndex("degree"));
-                Long emile=cursor.getLong(cursor.getColumnIndex("emile"));
+                String emile=cursor.getString(cursor.getColumnIndex("emile"));
                 String course=cursor.getString(cursor.getColumnIndex("course"));
                 String sex=cursor.getString(cursor.getColumnIndex("sex"));
                 Infor infor=new Infor();
@@ -151,7 +172,7 @@ public class MySQLiteAdapter {
     public boolean deleteByName(String name){
         openDatabase();
         boolean result=false;
-        int number=db.delete("teacher","name=? and course=?",new String[]{name});
+        int number=db.delete("teacher","name=?",new String[]{name});
         if (number>0){
             result=true;
             Toast.makeText(context,"删除成功",Toast.LENGTH_SHORT).show();
@@ -180,10 +201,10 @@ public class MySQLiteAdapter {
                 //读数据
                 //int id=cursor.getInt(cursor.getColumnIndex("_id"));//_id列
                 name=cursor.getString(cursor.getColumnIndex("name"));//name列
-                Long phone=cursor.getLong(cursor.getColumnIndex("phone"));//phone列
-                Long num=cursor.getLong(cursor.getColumnIndex("num"));
+                String phone=cursor.getString(cursor.getColumnIndex("phone"));//phone列
+                String  num=cursor.getString(cursor.getColumnIndex("num"));
                 String degree=cursor.getString(cursor.getColumnIndex("degree"));
-                Long emile=cursor.getLong(cursor.getColumnIndex("emile"));
+                String emile=cursor.getString(cursor.getColumnIndex("emile"));
                 course=cursor.getString(cursor.getColumnIndex("course"));
                 String sex=cursor.getString(cursor.getColumnIndex("sex"));
                 Infor infor=new Infor();
@@ -217,10 +238,10 @@ public class MySQLiteAdapter {
                 //读数据
                 //int id=cursor.getInt(cursor.getColumnIndex("_id"));//_id列
                 String name=cursor.getString(cursor.getColumnIndex("name"));//name列
-                Long phone=cursor.getLong(cursor.getColumnIndex("phone"));//phone列
-                Long num=cursor.getLong(cursor.getColumnIndex("num"));
+                String phone=cursor.getString(cursor.getColumnIndex("phone"));//phone列
+                String  num=cursor.getString(cursor.getColumnIndex("num"));
                 String degree=cursor.getString(cursor.getColumnIndex("degree"));
-                Long emile=cursor.getLong(cursor.getColumnIndex("emile"));
+                String emile=cursor.getString(cursor.getColumnIndex("emile"));
                 course=cursor.getString(cursor.getColumnIndex("course"));
                 String sex=cursor.getString(cursor.getColumnIndex("sex"));
                 Infor infor=new Infor();

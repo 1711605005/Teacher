@@ -4,8 +4,7 @@ public class Infor {
 //    public String name,course,sex,degree;
 //    public long num,phone,emile;
 
-    private String name,course,sex,degree;
-    private long num,phone,emile;
+    private String name,course,sex,degree,num,phone,emile;
 //    private int _id;
 //
 //    public int get_id() {
@@ -15,6 +14,30 @@ public class Infor {
 //    public void set_id(int _id) {
 //        this._id = _id;
 //    }
+
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmile() {
+        return emile;
+    }
+
+    public void setEmile(String emile) {
+        this.emile = emile;
+    }
 
     public String getName() {
         return name;
@@ -48,27 +71,27 @@ public class Infor {
         this.degree = degree;
     }
 
-    public long getNum() {
-        return num;
-    }
-
-    public void setNum(long num) {
-        this.num = num;
-    }
-
-    public long getPhone() {
-        return phone;
-    }
-
-    public void setPhone(long phone) {
-        this.phone = phone;
-    }
-
-    public long getEmile() {
-        return emile;
-    }
-
-    public void setEmile(long emile) {
-        this.emile = emile;
-    }
+//    public long getNum() {
+//        return num;
+//    }
+//
+//    public void setNum(long num) {
+//        this.num = num;
+//    }
+//
+//    public long getPhone() {
+//        return phone;
+//    }
+//
+//    public void setPhone(long phone) {
+//        this.phone = phone;
+//    }
+//
+//    public long getEmile() {
+//        return emile;
+//    }
+//
+//    public void setEmile(long emile) {
+//        this.emile = emile;
+//    }
 }
