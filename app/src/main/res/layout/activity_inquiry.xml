@@ -73,6 +73,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:background="#4fb68b95"
+        android:scrollbars="vertical"
         android:textColor="#d2e91bb2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
