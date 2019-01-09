@@ -53,22 +53,22 @@ public class MySQLiteAdapter {
             Toast.makeText(context,"姓名不能为空！",Toast.LENGTH_SHORT).show();
 
     }else if (num.length()==0) {
-        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "教师编号不能为空！", Toast.LENGTH_SHORT).show();
 
     }else if (course.length()==0) {
-        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "所教课程不能为空！", Toast.LENGTH_SHORT).show();
 
     }else if (sex.length()==0) {
-        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "性别不能为空！", Toast.LENGTH_SHORT).show();
 
     }else if (phone.length()==0) {
-        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "手机号码不能为空！", Toast.LENGTH_SHORT).show();
 
     }else if (degree.length()==0) {
-        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "学历不能为空！", Toast.LENGTH_SHORT).show();
 
     }else if (emile.length()==0) {
-        Toast.makeText(context, "姓名不能为空！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "QQ号码不能为空！", Toast.LENGTH_SHORT).show();
 
     }
         closeDatabase();
