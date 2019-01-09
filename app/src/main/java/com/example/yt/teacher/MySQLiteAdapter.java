@@ -262,6 +262,21 @@ public class MySQLiteAdapter {
         return list;
     }
 
+    public boolean deleteAll(){
+        openDatabase();
+        boolean result=false;
+        int number=db.delete("teacher",null,null);
+        if (number>0){
+            result=true;
+            Toast.makeText(context,"已全部删除！",Toast.LENGTH_SHORT).show();
+
+        }else {
+            Toast.makeText(context,"当前数据库已没有数据！",Toast.LENGTH_SHORT).show();
+        }
+        closeDatabase();
+        return result;
+    }
+
 
 //    public ArrayList<Infor> inquiry(String name){
 //    public List<Infor> inquiry(){
